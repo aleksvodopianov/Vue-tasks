@@ -1,0 +1,116 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html, charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<!-- <link rel="stylesheet" href="css/fonts.css" type="text/css"/> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+	<title>TITLE</title>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<div class="layout">
+				<div class="logo">
+
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a href="#"></a>
+						</li>
+						<li>
+							<a href="#"></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div id="content">
+				<div id="app">
+					{{ message }}
+				</div>
+
+				<p class="slayer"> Директива v-bind:</p>
+
+				<div id="app-2">
+					<span v-bind:title="message">
+						Наведи на меня курсор на пару секунд,
+						чтобы увидеть динамически связанное значение title!
+					</span>
+				</div>
+
+				<p class="slayer"> Условия и Циклы in Vue:</p>
+
+				<div id="app-3">
+					<span v-if="seen">Сейчас меня видно. Попробуйте ввести в консоли app3.seen = false. Сообщение пропадёт.</span>
+					<span v-else>А я отображаюсь когда значение app3.seen = false</span>
+				</div>
+
+				<div id="app-31" v-if="ok">
+					<template>
+						<h1>Заголовок</h1>
+						<p>Абзац 1</p>
+						<p>Абзац 2</p>
+					</template>
+				</div>
+
+				<div id="app-4">
+					<ol class="app-normal">
+						<li v-for="todo in todos">
+						{{ todo.text }}
+						</li>
+					</ol>
+					<p>Введите в консоли app4.todos.push({ text: 'Profit' }). Вы увидите, что к списку добавится новый элемент.</p>
+				</div>
+
+				<div id="app-5">
+					<p>{{ message }}</p>
+					<button v-on:click="reverseMessage">Перевернуть сообщение</button>
+				</div>
+
+				<p class="slayer">Директива v-model:</p>
+
+				<div id="app-6">
+					<p>Вы ввели: {{ message }}</p>
+					<input v-model="message">
+					<p>("Двустороннее связывание" in Vue)</p>
+				</div>
+
+				<div id="app-7">
+					<ol class="app-normal">
+						<!--
+						Теперь мы можем передать каждому компоненту todo-item объект
+						с информацией о задаче, который будет динамически меняться.
+						Мы также определяем для каждого компонента "key"
+						-->
+						<todo-item
+						v-for="item in groceryList"
+						v-bind:todo="item"
+						v-bind:key="item.id"
+						></todo-item>
+					</ol>
+				</div>
+
+			</div>
+			<div id="sidebar">
+
+			</div>
+			<aside>
+
+			</aside>
+		</main>
+		<footer>
+
+		</footer>
+	</div>
+
+	<script src="index.js"></script>
+
+</body>
+</html>
