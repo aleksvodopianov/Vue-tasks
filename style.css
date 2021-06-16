@@ -70,27 +70,7 @@ input, select {
 }
 input::-webkit-input-placeholder{color:#ebedec;}
 input:focus::-webkit-input-placeholder{color:#ebedec;}
-/*@media*/
 
-/* @media (min-width: 1921px){} 													QHD \ UHD
-@media (min-width: 1600px) and (max-width: 1919px) {}	HD +
-@media (min-width: 1440px) and (max-width: 1599px) {}	macbook
-@media (min-width: 1360px) and (max-width: 1439px) {}	HD
-@media (min-width: 1280px) and (max-width: 1359px) {} IPAD2
-@media (min-width: 1024px) and (max-width: 1279px) {} IPAD
-@media (min-width: 896px) and (max-width: 1023px) {}	Ip Xs max horizontal
-@media (min-width: 812px) and (max-width: 895px) {}		Ip Xs horizontal
-@media (min-width: 768px) and (max-width: 811px) {}		Tablet
-@media (min-width: 736px) and (max-width: 767px) {}		Ip 6,7,8 Plus horizontal
-@media (min-width: 667px) and (max-width: 735px) {}		Ip 6,7,8 horizontal
-@media (min-width: 568px) and (max-width: 666px) {}		Ip 5 horizontal
-@media (min-width: 480px) and (max-width: 567px) {}		Ip 4 horizontal
-@media (min-width: 414px) and (max-width: 479px) {}		Ip 6,7,8
-@media (min-width: 320px) and (max-width: 413px) {}		Ip 4,5 */
-
-/*@media end*/
-
-/* wrapper */
 #wrapper {
 	display:block;
 	position:relative;
@@ -102,6 +82,17 @@ input:focus::-webkit-input-placeholder{color:#ebedec;}
 	position:relative;
 	width:1400px;
 }
+header {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	background: #1e4136;
+}
+.logo {
+	font-size: 30px;
+	color:cornsilk;
+	text-align: center;
+}
 footer {
 	display:block;
 	width:100%;
@@ -112,11 +103,6 @@ main {
 	display:block;
 	width:100%;
 	position: relative;
-}
-header {
-	width:100%;
-	display:block;
-	position:relative;
 }
 #content {
 	display: flex;
