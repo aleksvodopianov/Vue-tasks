@@ -101,6 +101,11 @@ footer {
 	background: linear-gradient(#006446, #003223, #000000);
 	box-shadow: 0 0 20px 0  #000000;
 }
+.footer-text {
+	font-size: 18px;
+	color:cornsilk;
+	text-align: center;
+}
 main {
 	display:block;
 	width:100%;
